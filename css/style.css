@@ -6,6 +6,10 @@ body {
   font-size: 10px;
 }
 
+body {
+  position: relative;
+}
+
 /*header시작*/
 .header_box {
   display: flex;
@@ -45,6 +49,7 @@ body {
 .header_rbox_nav {
   font-size: 3rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .header_rbox_text_box {
@@ -282,8 +287,124 @@ footer {
   flex-wrap: wrap;
 }
 
-.mobile {
+.popup {
+  position: relative;
+}
+
+.popup_close {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.simjaeryun_popup {
+  position: absolute;
+  top: calc(5rem);
+  left: calc(50% - 50rem);
+  background: url("../img/WQDWDQ.jpg");
+  background-size: cover;
+  width: 80rem;
+  height: 80rem;
   display: none;
+}
+
+.skill_popup {
+  position: absolute;
+  top: calc(5rem);
+  left: calc(50% - 50rem);
+  background: #9dc8c8;
+  width: 80rem;
+  height: 80rem;
+  display: none;
+}
+
+.information_popup {
+  position: absolute;
+  top: calc(5rem);
+  left: calc(50% - 50rem);
+  background: #9dc8c8;
+  width: 80rem;
+  height: 80rem;
+  display: none;
+}
+
+.information_popup > .main_nav_box {
+  margin-top: 6rem;
+}
+
+.memo_popup {
+  position: absolute;
+  top: calc(5rem);
+  left: calc(50% - 50rem);
+  background: #9dc8c8;
+  width: 80rem;
+  height: 80rem;
+  display: none;
+}
+
+.memo_popup > .main_send_box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.information_popup > .main_nav {
+  height: 43.5rem;
+}
+
+.information_popup > .main_nav_com {
+  background: #011627;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.information_popup > .main_nav_com > .main_nav_img img {
+  width: 18.2rem;
+  height: 18.1rem;
+}
+
+.main_nav_sns {
+  background: #efffe9;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main_nav_sns > .main_nav_img img {
+  width: 19.6rem;
+  height: 27rem;
+}
+
+.main_nav_phone {
+  background: #2ec4b6;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.main_nav_phone > .main_nav_img img {
+  width: 15.7rem;
+  height: 25.7rem;
+}
+
+.main_nav_cal {
+  background: #e71d36;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main_nav_cal > .main_nav_img img {
+  width: 24.6rem;
+  height: 24.6rem;
 }
 
 @media (max-width: 767px) {
@@ -292,9 +413,6 @@ footer {
     font-size: 5px;
   }
 
-  .mobile {
-    display: block;
-  }
   .header_box {
     flex-direction: column;
   }
@@ -308,5 +426,12 @@ footer {
 
   .header_rbox_btn_box {
     display: none;
+  }
+}
+
+@media (max-width: 440px) {
+  html,
+  body {
+    font-size: 4px;
   }
 }
